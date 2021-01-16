@@ -51,21 +51,27 @@ public class TelaCadastro extends AppCompatActivity {
             if ( !textoSobrenome.isEmpty()){
                 if ( !textoSenha.isEmpty()){
                     if ( !textoCsenha.isEmpty()){
-                        if ( !textoEmail.isEmpty()){
-                            usuario = new Usuario();
-                            usuario.setNome( textoNome );
-                            usuario.setSobrenome( textoSobrenome );
-                            usuario.setSenha( textoSenha );
-                            usuario.setcSenha( textoCsenha );
-                            usuario.setEmail( textoEmail );
-                            cadastrarUsuario();
+                        if( textoSenha.equals(textoCsenha)) {
+                            if (!textoEmail.isEmpty()) {
+                                usuario = new Usuario();
+                                usuario.setNome(textoNome);
+                                usuario.setSobrenome(textoSobrenome);
+                                usuario.setSenha(textoSenha);
+                                usuario.setcSenha(textoCsenha);
+                                usuario.setEmail(textoEmail);
+                                cadastrarUsuario();
 
 
-                        }else {
+                            } else {
+                                Toast.makeText(TelaCadastro.this,
+                                        "Preencha o Email!",
+                                        Toast.LENGTH_SHORT).show();
+
+                            }
+                        }else{
                             Toast.makeText(TelaCadastro.this,
-                                    "Preencha o Email!",
+                                    "Digite Senha igual a Confirmar Senha!",
                                     Toast.LENGTH_SHORT).show();
-
                         }
                     }else{
                             Toast.makeText( TelaCadastro.this,
