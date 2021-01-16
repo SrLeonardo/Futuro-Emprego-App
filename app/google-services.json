@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "56739657401",
+    "project_id": "projetotestenovo-42c54",
+    "storage_bucket": "projetotestenovo-42c54.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:56739657401:android:94523e4b1e8b0c47a48d68",
+        "android_client_info": {
+          "package_name": "com.example.futuroemprego"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "56739657401-bdtiomou7v7eme4fm7vkqab9t10f9dt1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.futuroemprego",
+            "certificate_hash": "583dfb089819d759b3762bf3c5497201c3fb6c08"
+          }
+        },
+        {
+          "client_id": "56739657401-50ksidemsjv0mui6apf657pbnkapfuq5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAI8u_BD6f3yyR3g4n-jTQA-k1wcYdkDHM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "56739657401-50ksidemsjv0mui6apf657pbnkapfuq5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
