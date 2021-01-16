@@ -8,13 +8,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class TelaLogin extends AppCompatActivity {
 
     private TextView textCadastro;
     private EditText loginEmail, loginSenha;
     private Button buttonLogar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,31 +24,16 @@ public class TelaLogin extends AppCompatActivity {
         textCadastro = findViewById(R.id.textCadastro);
         loginEmail = findViewById(R.id.loginEmail);
         loginSenha = findViewById(R.id.loginSenha);
-        buttonLogar = findViewById(R.id.buttonCadastro);
 
-        buttonLogar.setOnClickListener(new View.OnClickListener() {
+
+       /* buttonLogar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                String textoEmail = loginEmail.getText().toString();
-                String textoSenha = loginSenha.getText().toString();
 
-                if ( !textoEmail.isEmpty()){
-                    if( !textoSenha.isEmpty()){
-
-                    }else {
-                        Toast.makeText(TelaLogin.this,
-                                "Preencha a Senha!",
-                                Toast.LENGTH_SHORT).show();
-                    }
-
-                }else {
-                    Toast.makeText(TelaLogin.this,
-                            "Preencha o Email!",
-                            Toast.LENGTH_SHORT).show();
-                }
             }
-        });
+        });*/
+
 
 
         textCadastro.setOnClickListener(new View.OnClickListener() {
