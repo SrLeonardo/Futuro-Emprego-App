@@ -65,6 +65,7 @@ public class TelaCadastro extends AppCompatActivity {
                                 cadastrarUsuario();
 
 
+
                             } else {
                                 Toast.makeText(TelaCadastro.this,
                                         "Preencha o Email!",

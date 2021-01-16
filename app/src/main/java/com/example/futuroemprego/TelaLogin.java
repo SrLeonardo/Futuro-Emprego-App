@@ -1,5 +1,6 @@
 package com.example.futuroemprego;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -10,11 +11,20 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.futuroemprego.config.ConfiguracaoFirebase;
+import com.example.futuroemprego.model.Usuario;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+
 public class TelaLogin extends AppCompatActivity {
 
     private TextView textCadastro;
     private EditText loginEmail, loginSenha;
     private Button buttonLogar;
+    private Usuario usuario;
+    private FirebaseAuth autenticacao;
 
 
     @Override
@@ -37,8 +47,10 @@ public class TelaLogin extends AppCompatActivity {
                 if (!textoEmail.isEmpty()) {
                     if ( !textoSenha.isEmpty()){
 
-
-
+                        usuario = new Usuario();
+                        usuario.setEmail( textoEmail );
+                        usuario.setSenha( textoSenha );
+                        validarLogin();
 
                     }else{
                         Toast.makeText( TelaLogin.this,
@@ -67,4 +79,29 @@ public class TelaLogin extends AppCompatActivity {
         });
 
     }
+
+    public void validarLogin(){
+
+        autenticacao = ConfiguracaoFirebase.getFirebaseautenticacao();
+        autenticacao.signInWithEmailAndPassword(
+                usuario.getEmail(),usuario.getSenha()
+        ).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+
+                if( task.isSuccessful()){
+                    Toast.makeText(TelaLogin.this,
+                            "Sucesso ao Fazer Login!",
+                            Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(TelaLogin.this,
+                            "Erro ao Fazer Login!",
+                            Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+    }
+
+
 }
