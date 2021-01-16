@@ -3,6 +3,7 @@ package com.example.futuroemprego;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -18,6 +19,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
+
+import java.util.Timer;
 
 public class TelaCadastro extends AppCompatActivity {
 
@@ -63,8 +66,9 @@ public class TelaCadastro extends AppCompatActivity {
                                 usuario.setcSenha(textoCsenha);
                                 usuario.setEmail(textoEmail);
                                 cadastrarUsuario();
-
-
+                                finish();
+                                Intent intent = new Intent(getApplicationContext(), TelaLogin.class);
+                                startActivity( intent );
 
                             } else {
                                 Toast.makeText(TelaCadastro.this,
