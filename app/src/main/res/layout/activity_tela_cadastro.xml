@@ -18,7 +18,7 @@
         app:srcCompat="@drawable/fundo2" />
 
     <Button
-        android:id="@+id/buttonComecar2"
+        android:id="@+id/buttonCadastro"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="42dp"
@@ -59,6 +59,8 @@
         android:ems="10"
         android:hint="Nome"
         android:inputType="textPersonName"
+        android:textColor="#F7F7FF"
+        android:textColorHint="#F7F7FF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -76,10 +78,30 @@
         android:ems="10"
         android:hint="Sobrenome"
         android:inputType="textPersonName"
+        android:textColor="#F7F7FF"
+        android:textColorHint="#F7F7FF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toBottomOf="@+id/nome" />
+
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginRight="41dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textColor="#F7F7FF"
+        android:textColorHint="#F7F7FF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/cSenha" />
 
     <EditText
         android:id="@+id/senha"
@@ -91,50 +113,26 @@
         android:ems="10"
         android:hint="Senha"
         android:inputType="textPassword"
+        android:textColor="#F7F7FF"
+        android:textColorHint="#F7F7FF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toBottomOf="@+id/sobrenome" />
 
     <EditText
-        android:id="@+id/cpf"
+        android:id="@+id/cSenha"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="41dp"
         android:layout_marginRight="41dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="CPF"
+        android:hint="Confirmar Senha"
+        android:inputType="textPassword"
+        android:textColor="#F7F7FF"
+        android:textColorHint="#F7F7FF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toBottomOf="@+id/senha" />
-
-    <EditText
-        android:id="@+id/celular"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="41dp"
-        android:layout_marginRight="41dp"
-        android:ems="10"
-        android:hint="Celular"
-        android:inputType="phone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/cpf" />
-
-    <EditText
-        android:id="@+id/datanasc"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="41dp"
-        android:layout_marginRight="41dp"
-        android:ems="10"
-        android:hint="Data Nascimento"
-        android:inputType="date"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/celular" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
