@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.futuroemprego.config.ConfiguracaoFirebase;
+import com.example.futuroemprego.helper.Base64Custom;
 import com.example.futuroemprego.model.Usuario;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -66,7 +67,7 @@ public class TelaCadastro extends AppCompatActivity {
                                 usuario.setcSenha(textoCsenha);
                                 usuario.setEmail(textoEmail);
                                 cadastrarUsuario();
-                                finish();
+
                                 Intent intent = new Intent(getApplicationContext(), TelaLogin.class);
                                 startActivity( intent );
 
@@ -120,9 +121,12 @@ public class TelaCadastro extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if ( task.isSuccessful()){
-                    Toast.makeText( TelaCadastro.this,
-                            "Sucesso ao Cadastrar Usuário!",
-                            Toast.LENGTH_SHORT).show();
+
+                    String idUsuario = Base64Custom.codificarBase64(usuario.getEmail());
+                    usuario.setIdUsuario(idUsuario);
+                    usuario.salvar();
+
+                    finish();
                 }else{
                     String excecao = "";
                     try{

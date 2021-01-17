@@ -1,10 +1,35 @@
 package com.example.futuroemprego.model;
 
+import com.example.futuroemprego.config.ConfiguracaoFirebase;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.Exclude;
+
 public class Usuario {
 
-    private String nome,sobrenome,email,senha,cSenha;
+    private String nome;
+    private String sobrenome;
+    private String email;
+    private String senha;
+    private String cSenha;
+    private String idUsuario;
 
     public Usuario() {
+    }
+
+    public void salvar(){
+        DatabaseReference firebase = ConfiguracaoFirebase.getFirebaseDatabase();
+        firebase.child("usuarios")
+                .child( this.idUsuario )
+                .setValue( this );
+    }
+
+    @Exclude
+    public String getIdUsuario() {
+        return idUsuario;
+    }
+
+    public void setIdUsuario(String idUsuario) {
+        this.idUsuario = idUsuario;
     }
 
     public String getNome() {
