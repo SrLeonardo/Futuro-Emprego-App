@@ -9,14 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".TelaHome"
-            android:label="@string/title_activity_tela_home"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait"></activity>
+        <activity android:name=".TelaHome"></activity>
         <activity
             android:name=".TelaCadastro"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".TelaLogin"
             android:screenOrientation="portrait" />
