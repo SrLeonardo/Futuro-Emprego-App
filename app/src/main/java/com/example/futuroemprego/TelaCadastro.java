@@ -68,8 +68,6 @@ public class TelaCadastro extends AppCompatActivity {
                                 usuario.setEmail(textoEmail);
                                 cadastrarUsuario();
 
-                                Intent intent = new Intent(getApplicationContext(), TelaLogin.class);
-                                startActivity( intent );
 
                             } else {
                                 Toast.makeText(TelaCadastro.this,

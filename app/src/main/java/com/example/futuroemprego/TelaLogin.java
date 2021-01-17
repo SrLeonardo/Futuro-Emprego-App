@@ -34,6 +34,7 @@ public class TelaLogin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_login);
 
+
         textCadastro = findViewById(R.id.textCadastro);
         loginEmail = findViewById(R.id.loginEmail);
         loginSenha = findViewById(R.id.loginSenha);
@@ -92,9 +93,9 @@ public class TelaLogin extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
 
                 if( task.isSuccessful()){
-                    Toast.makeText(TelaLogin.this,
-                            "Sucesso ao Fazer Login!",
-                            Toast.LENGTH_SHORT).show();
+
+                  abrirTelaHome();
+
                 }else{
                     String excecao = "";
                     try{
@@ -115,6 +116,9 @@ public class TelaLogin extends AppCompatActivity {
         });
 
     }
+    public void abrirTelaHome(){
+        finish();
+        startActivity(new Intent(this, TelaHome.class));
 
-
+    }
 }

@@ -55,7 +55,7 @@ public class Usuario {
     public void setEmail(String email) {
         this.email = email;
     }
-
+    @Exclude
     public String getSenha() {
         return senha;
     }
@@ -63,7 +63,7 @@ public class Usuario {
     public void setSenha(String senha) {
         this.senha = senha;
     }
-
+    @Exclude
     public String getcSenha() {
         return cSenha;
     }
