@@ -12,7 +12,8 @@
         <activity
             android:name=".TelaHome"
             android:label="@string/title_activity_tela_home"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".TelaCadastro"
             android:screenOrientation="portrait"></activity>
