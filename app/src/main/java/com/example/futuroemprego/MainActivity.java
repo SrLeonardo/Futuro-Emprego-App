@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         autenti = ConfiguracaoFirebase.getFirebaseautenticacao();
 
         if(autenti.getCurrentUser() != null){
+            finish();
             abrirTelaHome();
         }
 
