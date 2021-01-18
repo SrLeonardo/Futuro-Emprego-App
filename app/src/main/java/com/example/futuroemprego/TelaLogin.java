@@ -43,7 +43,7 @@ public class TelaLogin extends AppCompatActivity {
 
         buttonLogar.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 String textoEmail = loginEmail.getText().toString();
                 String textoSenha = loginSenha.getText().toString();
 

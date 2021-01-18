@@ -26,8 +26,8 @@ public class TelaHome extends AppCompatActivity {
 
       buttonEf.setOnClickListener(new View.OnClickListener() {
           @Override
-          public void onClick(View view) {
-              finish();
+          public void onClick(View v) {
+
               Intent intent = new Intent(getApplicationContext(), TelaEf.class);
               startActivity( intent );
           }
@@ -36,7 +36,7 @@ public class TelaHome extends AppCompatActivity {
 
       buttonFc.setOnClickListener(new View.OnClickListener() {
           @Override
-          public void onClick(View view) {
+          public void onClick(View v) {
 
               Intent intent = new Intent(getApplicationContext(), TelaFc.class);
               startActivity( intent );
@@ -46,7 +46,7 @@ public class TelaHome extends AppCompatActivity {
 
         buttonPt.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
 
                 Intent intent = new Intent(getApplicationContext(), TelaAulaPt.class);
                 startActivity( intent );
